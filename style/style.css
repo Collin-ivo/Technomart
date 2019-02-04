@@ -1002,18 +1002,69 @@ a {
     padding: 0;
 }
 
-.filter .range-slider {
-    width: 220px;
-    height: 80px;
-    margin-bottom: 8px;
-    background: #f7f3ec;
+.filter-item {
 }
 
-.price-range-container {
+.filter .range-filter {
+    width: 220px;
+}
+
+.range-controls {
+    position: relative;
+
+    height: 80px;
+    margin-bottom: 10px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f7f3ec;
+}
+
+.range-controls .scale {
+    height: 2px;
+
+    background-color: #d7dcde;
+}
+.range-controls .bar {
+    margin-left: 30%;
+    width: 60%;
+    height: 2px;
+
+    background-color: #00ca74;
+}
+
+.range-controls .toggle {
+    box-sizing: content-box;
+    position:  absolute;
+    top: 31px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range-controls .toggle-min {
+    left: 68px;
+}
+.range-controls .toggle-max {
+    left: 170px;
+}
+
+.price-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
+}
+
+.price-controls input {
+    background-color: #f7f3ec;
 }
 
 .filter-option {
@@ -1086,11 +1137,11 @@ a {
 
 .filter h2,
 .sorter,
-.price-range-container input {
+.price-controls input {
     background: #f7f3ec;
 }
 
-.price-range-container input {
+.price-controls input {
     box-sizing: border-box;
     padding: 10px;
     width: 95px;
@@ -1629,15 +1680,15 @@ a {
 
 .services .container::after {
     content: "";
-    width: 100%;
-    height: 100%;
+    width: 468px;
+    height: 261px;
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    right: 0;
 
     background-image: url("../img/ship-cargo.png");
     background-repeat: no-repeat;
-    background-position: 98% 100%;
+    /*background-position: 98% 100%;*/
 }
 
 .services-navigation {
@@ -1671,7 +1722,7 @@ a {
     padding: 0;
     padding-left: 23px;
 
-    /*text-decoration: none;*/
+    text-decoration: none;
     color: #ffffff;
     font-size: 21px;
     line-height: 60px;
@@ -1689,13 +1740,11 @@ a {
     border-top-color: transparent;
 }
 
-.services-navigation li:hover a,
-.services-navigation li:active a {
-    background-color: #ffffff;
-    color: #5b423a;
+.services-navigation-item:hover,
+.services-navigation-item:focus {
+    background-color: #293449;
 }
 
-.services-navigation-item:active,
 .services-navigation-item.services-navigation-current {
     background-color: #ffffff;
     color: #32425c;

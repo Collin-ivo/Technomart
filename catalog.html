@@ -84,17 +84,25 @@
                 <section class="filters">
                     <form class="filter" method="post">
                         <h2>Фильтр:</h2>
-                        <fieldset>
-                            <legend>Цена:</legend>
-                            <div class="range-slider"></div>
-                            <div class="price-range-container">
+                        <fieldset class="filter-item">
+                        <legend>Цена:</legend>
+                        <div class="range-filter">
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="toggle toggle-min"></div>
+                                <div class="toggle toggle-max"></div>
+                            </div>
+                            <div class="price-controls">
                                 <label><input type="text" name="min-price" value="0"></label>
                                 <span>—</span>
-                                <label><input type="text" name="min-price" value="30000"></label>
+                                <label><input type="text" name="max-price" value="30000"></label>
                             </div>
-                        </fieldset>
+                        </div>
+                    </fieldset>
                         <div class="fieldset-container">
-                            <fieldset>
+                            <fieldset class="filter-item">
                                 <legend>Производители:</legend>
                                 <ul>
                                     <li class="filter-option">
@@ -126,7 +134,7 @@
                             </fieldset>
                         </div>
                         <div class="fieldset-container last-container">
-                            <fieldset>
+                            <fieldset class="filter-item">
                                 <legend>Питание:</legend>
                                 <ul>
                                     <li class="filter-option">
