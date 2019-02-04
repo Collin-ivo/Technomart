@@ -17,15 +17,18 @@
                 </p>
                 <ul class="user-menu">
                     <li>
-                        <a class="header-search" href="#">Поиск:
-                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
-                        </a>
+                        <form class="search-form">
+                            <input type="search" placeholder="Поиск:">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
+                            </button>
+                        </form>
                     </li>
                     <li>
                         <a class="user-menu-bookmarks" href="#">Закладки: 0</a>
                     </li>
                     <li>
-                        <a class="user-menu-cart" href="#">Корзина: 0</a>
+                        <a class="user-menu-cart active" href="#">Корзина: 10</a>
                     </li>
                     <li>
                         <a class="check-order-btn">Оформить заказ</a>
@@ -43,7 +46,7 @@
 
                 <div class="user-navigation">
                     <div class="user-navigation-user-logged">
-                        <span class="user-navigation-user-name">Равшан Джумшутович</span>
+                        <span class="user-navigation-user-name">Равшан Джамшутович</span>
                         <a href="#" class="user-navigation-logout">Выйти</a>
                     </div>
                     <div class="additional-links">
@@ -147,7 +150,7 @@
                         <h2>Сортировка:</h2>
                         <ul>
                             <li class="sorter-option">
-                                <a class="sorter-option-active" href="#">По цене</a>
+                                <a class="active" href="#">По цене</a>
                             </li>
                             <li class="sorter-option">
                                 <a class="" href="#">По типу</a>
@@ -158,10 +161,16 @@
                         </ul>
                         <ul>
                             <li class="sorter-option">
-                                <a class="sort-order-method" href="#">По возрастанию</a>
+                                <a class="sort-order-method active" href="#">
+                                    <span class="visually-hidden">По возрастанию</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+                                </a>
                             </li>
                             <li class="sorter-option">
-                                <a class="sort-order-method" href="#">По убыванию</a>
+                                <a class="sort-order-method" href="#">
+                                    <span class="visually-hidden">По убыванию</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                                </a>
                             </li>
                         </ul>
                     </section>
@@ -194,7 +203,7 @@
                                 <a href="#" class="button product-button-price">25500 Р.</a>
                             </div>
                         </li>
-                        <li class="product-item">
+                        <li class="product-item flag-new">
                             <div class="flex-inner-container">
                                 <div>
                                     <img src="img/bfg-9000.png" width="184" height="164" alt="BOSCH BFG 9000">
@@ -222,7 +231,7 @@
                                 <a href="#" class="button product-button-price">25500 Р.</a>
                             </div>
                         </li>
-                        <li class="product-item">
+                        <li class="product-item flag-new">
                             <div class="flex-inner-container">
                                 <div>
                                     <img src="img/bfg-9000.png" width="184" height="164" alt="BOSCH BFG 9000">
@@ -250,7 +259,7 @@
                                 <a href="#" class="button product-button-price">25500 Р.</a>
                             </div>
                         </li>
-                        <li class="product-item">
+                        <li class="product-item flag-new">
                             <div class="flex-inner-container">
                                 <div>
                                     <img src="img/bfg-9000.png" width="184" height="164" alt="BOSCH BFG 9000">
@@ -369,11 +378,13 @@
         </div>
     </footer>
 
-    <section class="modal modal-cart-add">
+    <section class="modal modal-cart-add visually-hidden">
         <h2>Товар добавлен в корзину</h2>
-        <button type="button" class="button" title="Оформить заказ">Оформить заказ</button>
-        <button type="button" class="button" title="Продолжить покупки">Продолжить покупки</button>
         <button type="button" class="modal-close" title="Закрыть">Закрыть</button>
+        <div class="flex-container">
+            <button type="button" class="button modal-cart-button" title="Оформить заказ">Оформить заказ</button>
+            <button type="button" class="button modal-cart-button" title="Продолжить покупки">Продолжить покупки</button>
+        </div>
     </section>
 </body>
 </html>
