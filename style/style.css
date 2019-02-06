@@ -1860,7 +1860,7 @@ a {
 }
 
 .contacts .flex-container {
-    height: 100%;
+    /*height: 100%;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1869,6 +1869,20 @@ a {
 .contacts p:first-of-type {
     width: 200px;
     margin-bottom: 20px;
+}
+
+.contacts .contact-map {
+    height: 158px;
+    transition-duration: 0.6s;
+}
+.contacts .contact-map img {
+    width: 300px;
+    height: 158px;
+}
+
+.contacts .contact-map:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(238,54,67,0.5);
 }
 
 .contacts-button {
@@ -2065,7 +2079,38 @@ a {
     color: #ffffff;
 }
 
+@keyframes bounce {
+    0% {transform: translateY(-2000px);}
+    70% {transform: translateY(30px);}
+    90% {transform: translateY(-10px);}
+    100% {transform: translateY(0px);}
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
 .modal {
+    display: none;
+
     position: fixed;
     left: 0;
     right: 0;
@@ -2075,10 +2120,20 @@ a {
     z-index: 100;
 }
 
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
 .modal .modal-close {
     position: absolute;
     top: 9px;
     right: 9px;
+    z-index: 100;
 }
 
 .modal .modal-close:hover,
@@ -2092,6 +2147,9 @@ a {
     background-color: #ffffff;
     border-top: 7px solid #ff5357;
     box-shadow: 0 20px 40px rgba(41,52,73,0.5);
+}
+
+.modal-write-us {
 }
 
 .write-us-form {
@@ -2173,16 +2231,31 @@ a {
 }
 
 .modal-map {
+
     width: 940px;
     height: 446px;
     box-shadow: 0 0 16px 4px rgba(47,42,43,0.25);
 }
+
+.modal-map iframe {
+    position: relative;
+    z-index: 2;
+    border: none;
+}
+
 .modal-map p {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin: 0;
-    padding: 0;
-    width: 940px;
-    height: 446px;
-    overflow: hidden;
+    z-index: 1;
+    /*padding: 0;*/
+    /*width: 940px;*/
+    /*height: 446px;*/
+    /*overflow: hidden;*/
+}
+
+.modal-cart-add {
 }
 
 .modal-cart-add .flex-container {

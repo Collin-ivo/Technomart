@@ -346,14 +346,14 @@
         </div>
     </footer>
 
-    <section class="modal modal-write-us visually-hidden">
+    <section class="modal modal-write-us">
         <h2 class="visually-hidden">Напишите нам</h2>
         <button type="button" class="modal-close" title="Закрыть">Закрыть</button>
-        <form class="write-us-form">
+        <form class="write-us-form" action="#" method="post">
             <div class="flex-wrapper">
                 <p>
                     <label for="write-us-name">Ваше имя:</label>
-                    <input type="text" name="name" id="write-us-name" placeholder="Представьтесь, пожалуйста">
+                    <input type="text" name="username" id="write-us-name" placeholder="Представьтесь, пожалуйста">
                 </p>
                 <p>
                     <label for="write-us-mail">Ваш e-mail:</label>
@@ -369,13 +369,17 @@
             </div>
         </form>
     </section>
-    <section class="modal modal-map visually-hidden">
+    <section class="modal modal-map">
         <h2 class="visually-hidden">Как нас найти</h2>
+        <button type="button" class="modal-close">Закрыть</button>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBVE4SuDLA" width="940" height="446" frameborder="1"
+                allowfullscreen="true"></iframe>
         <p>
             <img src="img/map.png" width="940" height="446" alt="Офис компании по адресу ул. Большая Кнюшенная
             19/8, Санкт-Петербург">
         </p>
-        <button type="button" class="modal-close">Закрыть</button>
     </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
