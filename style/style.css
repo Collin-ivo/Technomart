@@ -1305,8 +1305,8 @@ a {
 
 .pagination-item a:hover,
 .pagination-item a:focus {
-     border-color: #bdc6ca;
- }
+    border-color: #bdc6ca;
+}
 
 .pagination-item a:active {
     border-color: #ee3643;
@@ -1424,8 +1424,8 @@ a {
 }
 
 /*.product-item .flex-inner-container > div:first-child:hover img {*/
-    /*opacity: 0;*/
-    /*transition-duration: 0.5s;*/
+/*opacity: 0;*/
+/*transition-duration: 0.5s;*/
 /*}*/
 
 .product-item-buttons {
